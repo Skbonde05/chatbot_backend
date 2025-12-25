@@ -21,12 +21,14 @@
                         Online
                     </span>
                 </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌓</button>
             </div>
         </div>
 
         <!-- Chat Messages Area -->
         <div class="chat-messages" id="chatMessages">
-            <!-- Welcome message from bot -->
             <div class="message bot-message">
                 <div class="message-content">
                     <p>Welcome to Wishlistz 👋</p>
@@ -44,7 +46,6 @@
         <!-- Chat Input Area -->
         <div class="chat-input-container">
             <div class="input-wrapper">
-                <!-- Hidden file input for uploading files -->
                 <input
                     type="file"
                     id="fileInput"
@@ -52,9 +53,7 @@
                     accept="image/jpeg,image/jpg,image/png,.pdf,.doc,.docx,.txt"
                     hidden
                 >
-                <!-- Attachment button -->
                 <button id="attachButton" class="attach-button" title="Attach file or image">
-                    <!-- Paperclip icon (SVG) -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
                     </svg>
@@ -68,7 +67,6 @@
                     autocomplete="off"
                 >
                 <button id="sendButton" class="send-button">
-                    <!-- Send icon (SVG) -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>

@@ -407,3 +407,11 @@ if (messageInput.value.trim() === '') {
     sendButton.style.opacity = '0.5';
     sendButton.style.cursor = 'not-allowed';
 }
+
+// Theme Toggle Logic
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌓';
+});
