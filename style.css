@@ -452,7 +452,6 @@ body.light-mode .user-message .message-content {
 }
 
 /* Mobile-specific fixes */
-/* Mobile-specific fixes */
 @media (max-width: 600px) {
   .chatbot-zoom-wrapper {
     transform: none !important;
@@ -476,28 +475,43 @@ body.light-mode .user-message .message-content {
     left: 0 !important;
     right: 0 !important;
     bottom: 12px !important;
-    height: calc(100vh - 24px) !important;       /* ✅ fixed height for mobile */
-    max-height: calc(100vh - 80px) !important;   /* ✅ prevents overflow */
+    height: calc(100vh - 24px) !important;         /* Full height for mobile */
+    max-height: calc(100vh - 80px) !important;     /* Prevent overflow if safe areas */
     border-radius: 16px !important;
     overflow: hidden !important;
     pointer-events: auto;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     transition: all 0.3s ease-in-out;
-    padding-top: 0 !important; /* 🔄 Removed extra padding here */
+    padding-top: 0 !important;                     /* Remove container padding */
   }
 
+  /* 🔻 LOWER HEADER HEIGHT */
   .chat-header {
-    padding-top: 20px !important; /* ⬆️ Slightly increased for better spacing */
+    height: 48px !important;                       /* Smaller header */
+    padding: 0 12px !important;                    /* Slimmer sides */
+    display: flex !important;
+    align-items: center !important;                /* Center vertically */
+    justify-content: space-between !important;
+    font-size: 14px !important;                    /* Adjust font */
+    line-height: 48px !important;
+  }
+
+  /* Optional: smaller icons/logo/avatar in header */
+  .chat-header img,
+  .chat-header .avatar,
+  .chat-header svg {
+    height: 32px !important;
+    width: 32px !important;
   }
 
   .chat-messages {
     background-attachment: scroll !important;
     background-position: center !important;
-    background-position-y: 230px !important;
-    background-size: 260px !important;
+    background-position-y: 190px !important;       /* Adjusted for new header size */
+    background-size: 240px !important;
     background-repeat: no-repeat !important;
-    padding-top: 60px !important; /* ✅ Keeps logo/messages from crowding top */
+    padding-top: 48px !important;                  /* Push content below header */
   }
 
   .message-content {
